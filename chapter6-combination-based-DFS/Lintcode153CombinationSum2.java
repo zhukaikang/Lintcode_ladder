@@ -24,6 +24,8 @@ public class Lintcode153CombinationSum2 {
                 break;
             }
             if(i!=index && num[i]==num[i-1]){
+            	//判断条件改为i!=index的原因：使重复的数字能够被加入进去。因为每个数字只会考虑一次（i +1），所以不会有同一个数字用多次的情况，
+            	//碰到多个相同数字的情况时，i若已经不等于index，说明已经在考虑了这个数字之后又碰到了一次相同数值的数字，因此跳过防止重复解。
                 continue;
             }
             com.add(num[i]);
